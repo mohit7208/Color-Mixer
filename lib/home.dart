@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rgbslider/common/textstyles.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -23,12 +24,11 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Text(
-                  'Red  ',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
+                TextStyles(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  text: 'Red  ',
                 ),
                 Expanded(
                   child: Slider(
@@ -37,7 +37,6 @@ class _HomeState extends State<Home> {
                     min: 0.0,
                     max: 255.0,
                     onChanged: (redValue) {
-                      print(red.toInt());
                       setState(() {
                         red = redValue;
                       });
@@ -49,12 +48,11 @@ class _HomeState extends State<Home> {
             ),
             Row(
               children: <Widget>[
-                Text(
-                  'Blue ',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
+                TextStyles(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  text: 'Blue ',
                 ),
                 Expanded(
                   child: Slider(
@@ -63,7 +61,6 @@ class _HomeState extends State<Home> {
                     min: 0.0,
                     max: 255.0,
                     onChanged: (blueValue) {
-                      print(red.toInt());
                       setState(() {
                         blue = blueValue;
                       });
@@ -75,12 +72,11 @@ class _HomeState extends State<Home> {
             ),
             Row(
               children: <Widget>[
-                Text(
-                  'Green',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
+                TextStyles(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  text: 'Green',
                 ),
                 Expanded(
                   child: Slider(
@@ -89,7 +85,6 @@ class _HomeState extends State<Home> {
                     min: 0.0,
                     max: 255.0,
                     onChanged: (greenValue) {
-                      print(red.toInt());
                       setState(() {
                         green = greenValue;
                       });
